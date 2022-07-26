@@ -51,4 +51,5 @@ app.get('/products', async (req,res) =>{
  
  })
 
- app.listen(4000,() => {console.log('listen on 4000')});
+ //app.listen(4000,() => {console.log('listen on 4000')});
+ app.listen(process.env.PORT || 4000);

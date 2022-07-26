@@ -1,22 +1,20 @@
 {
-    "scripts": {
+  "scripts": {
     "frontend": "cd frontend && npm start",
     "backend": "cd backend && npm install && node index.js",
     "heroku-postbuild": "cd frontend && npm install && npm run build"
   },
   "dependencies": {
+    "body-parser": "^1.20.0",
     "express": "^4.17.2",
-    "path": "^0.12.7",
     "mysql2": "^2.3.3",
-    "body-parser": "^1.20.0"
+    "path": "^0.12.7"
   },
-  
-    "name": "eommerce1",
-    "description": "a new ecommerce app",
-    "version": "1.0.0",
-    "engines": {
-      "node": "14.x",
-      "npm": "6.x"
-    }
-  
+  "name": "eommerce1",
+  "description": "a new ecommerce app",
+  "version": "1.0.0",
+  "engines": {
+    "node": "14.x",
+    "npm": "6.x"
+  }
 }
