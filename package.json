@@ -1,7 +1,11 @@
 {
     "scripts": {
     "frontend": "cd frontend && npm start",
-    "api": "cd backend && node index.js",
+    "backend": "cd backend && node index.js",
     "heroku-postbuild": "cd frontend && npm install && npm run build"
+  },
+  "dependencies": {
+    "express": "^4.17.2",
+    "path": "^0.12.7"
   }
 }
