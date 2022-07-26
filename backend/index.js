@@ -4,6 +4,17 @@ const bodyParser = require ('body-parser');
 const app = express();
 
 const mysql = require('mysql2');
+const path = require("path");
+app.use(express.static(path.resolve(__dirname, "../frontend/build")));
+
+
+// Serve static files from the React frontend app
+//app.use(express.static(path.join(__dirname, '../frontend/build')))
+
+// AFTER defining routes: Anything that doesn't match what's above, send back index.html; (the beginning slash ('/') in the string is important!)
+/*app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname + '/../frontend/build/index.html'))
+})*/
 
 //CONNECTION POOLING (https://dev.mysql.com/doc/connector-j/5.1/en/connector-j-usagenotes-j2ee-concepts-connection-pooling.html)
 const pool = mysql.createPool({
