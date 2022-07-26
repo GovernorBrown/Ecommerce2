@@ -1,10 +1,11 @@
 const express = require ('express');
 const bodyParser = require ('body-parser');
 //const dotenv= require('dotenv').config();
-const app = express();
+
 
 const mysql = require('mysql2');
 const path = require("path");
+const app = express();
 app.use(express.static(path.resolve(__dirname, "../frontend/build")));
 
 
