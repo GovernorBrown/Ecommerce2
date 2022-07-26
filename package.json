@@ -6,7 +6,9 @@
   },
   "dependencies": {
     "express": "^4.17.2",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "mysql2": "^2.3.3",
+    "body-parser": "^1.20.0"
   },
   
     "name": "eommerce1",
