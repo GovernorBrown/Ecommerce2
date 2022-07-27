@@ -19,10 +19,10 @@ app.use(express.static(path.resolve(__dirname, "../frontend/build")));
 
 //CONNECTION POOLING (https://dev.mysql.com/doc/connector-j/5.1/en/connector-j-usagenotes-j2ee-concepts-connection-pooling.html)
 const pool = mysql.createPool({
-    host:'database-3.chstqnjz9uvy.us-east-1.rds.amazonaws.com',
-    port:'3307',
+    host:'database-1.chstqnjz9uvy.us-east-1.rds.amazonaws.com',
+    port:'3306',
     user:'admin',
-    password:'G0vern0r.!',
+    password:'Marshall401968.!',
     database:'imdbmovies'   
 }).promise()
 
