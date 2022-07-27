@@ -1,11 +1,11 @@
 import React, {useRef} from "react"
-import emailjs from "emailjs-com"
+//import emailjs from "emailjs-com"
 
 
 const ContactScreen = () =>{
     
     const form = useRef();
-    const sendEmail = (e) => {
+    /*const sendEmail = (e) => {
         e.preventDefault();
         emailjs.sendForm("service_wovwx47",
         "template_fjuaifc",
@@ -16,9 +16,9 @@ const ContactScreen = () =>{
         error => console.log(error.text)
     );
     e.target.reset();
-    };
+    };*/
     return (
-        <form ref={form} onSubmit={sendEmail}>
+        <form ref={form}>
             <label>Name</label>
             <input type="text" name="user name"/>
             <label>Email</label>
