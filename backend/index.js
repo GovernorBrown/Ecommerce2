@@ -19,15 +19,11 @@ app.use(express.static(path.resolve(__dirname, "../frontend/build")));
 
 //CONNECTION POOLING (https://dev.mysql.com/doc/connector-j/5.1/en/connector-j-usagenotes-j2ee-concepts-connection-pooling.html)
 const pool = mysql.createPool({
-    host:'database-1.chstqnjz9uvy.us-east-1.rds.amazonaws.com',
-    port:'3306',
-    user:'admin',
-    password:'Marshall401968.!',
-    database:'imdbmovies'   
-}).promise().catch(error => {
-    console.log("the rds database failed to connect due to the following error:");
-    console.log(error);
-})
+    host: '127.0.0.1',
+    user: 'root',
+    password: 'G0vern0r.!', 
+    database: 'imdbmovies',
+}).promise()
 
 const getProducts = async () =>{
     const [rows] = await pool.query ('SELECT * from products');
@@ -54,5 +50,5 @@ app.get('/products', async (req,res) =>{
  
  })
 
- app.listen(4000,() => {console.log('listen on 4000')});
- //app.listen(process.env.PORT || 4001);
+ //app.listen(4000,() => {console.log('listen on 4000')});
+ app.listen(process.env.PORT || 4000);
