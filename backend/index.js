@@ -24,7 +24,10 @@ const pool = mysql.createPool({
     user:'admin',
     password:'Marshall401968.!',
     database:'imdbmovies'   
-}).promise()
+}).promise().catch(error => {
+    console.log("the rds database failed to connect due to the following error:");
+    console.log(error);
+})
 
 const getProducts = async () =>{
     const [rows] = await pool.query ('SELECT * from products');
