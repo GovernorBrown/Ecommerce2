@@ -18,6 +18,9 @@ import { LinkContainer } from 'react-router-bootstrap'
                         <LinkContainer to='/login'>
                         <Nav.Link><i className='fas fa-user'></i>Sign In</Nav.Link>
                         </LinkContainer>
+                        <LinkContainer to='/ContactScreen'>
+                        <Nav.Link><i className='fas fa-user'></i>Contact Us</Nav.Link>
+                        </LinkContainer>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

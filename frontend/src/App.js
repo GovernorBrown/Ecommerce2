@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import HomeScreen from './screens/HomeScreen.js'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import ProductScreen from './screens/ProductScreen.js';
+import ContactScreen from './screens/ContactScreen.js';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
     <Routes>
       <Route path='/' element={<HomeScreen />} exact />
       <Route path='product/:id' element={<ProductScreen />} />
+      <Route path='ContactScreen' element={<ContactScreen />} exact/>
     </Routes>
   </Container>
   </main>
