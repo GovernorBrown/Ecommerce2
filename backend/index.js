@@ -19,12 +19,12 @@ app.use(express.static(path.resolve(__dirname, "../frontend/build")));
 
 //CONNECTION POOLING (https://dev.mysql.com/doc/connector-j/5.1/en/connector-j-usagenotes-j2ee-concepts-connection-pooling.html)
 const pool = mysql.createPool({
-    host: '127.0.0.1',
-    user: 'root',
-    password: 'G0vern0r.!', 
-    database: 'imdbmovies',
+    host:'database-3.chstqnjz9uvy.us-east-1.rds.amazonaws.com',
+    port:'3307',
+    user:'admin',
+    password:'G0vern0r.!',
+    database:'imdbmovies'   
 }).promise()
-
 
 const getProducts = async () =>{
     const [rows] = await pool.query ('SELECT * from products');
