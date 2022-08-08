@@ -6,6 +6,7 @@ const bodyParser = require ('body-parser');
 const mysql = require('mysql2');
 const path = require("path");
 const app = express();
+// Serve static files from the React frontend app
 app.use(express.static(path.resolve(__dirname, "../frontend/build")));
 
 
